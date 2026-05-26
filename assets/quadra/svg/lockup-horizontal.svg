@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" font-family="&#39;Cormorant Garamond&#39;, &#39;Times New Roman&#39;, serif">
+  <g transform="translate(20 50) scale(1)">
+    <circle cx="50" cy="50" r="37" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4"></circle>
+    <circle cx="50" cy="50" r="30" fill="none" stroke="#D4AF37" stroke-width="3"></circle>
+    <circle cx="50" cy="50" r="23" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4"></circle>
+    <line x1="58" y1="58" x2="86" y2="86" stroke="#D4AF37" stroke-width="4" stroke-linecap="butt"></line>
+  </g>
+  <line x1="150" y1="60" x2="150" y2="140" stroke="#D4AF37" stroke-width="1" opacity="0.2"></line>
+  <text x="180" y="135" font-style="italic" font-weight="500" font-size="105" fill="#F4EEDD" letter-spacing="-2">Quadra</text>
+</svg>
