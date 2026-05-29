@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quadra — I conti quadrano</title>
-  <meta name="description" content="Quadra è un'app di finanza personale per tenere ogni euro al suo posto. Movimenti, regole automatiche, report mensili. iOS e Android." />
+  <meta name="description" content="Quadra è un'app di finanza personale Zero-Knowledge. Partita doppia, regole automatiche, report annuali. iOS, Android, macOS. I tuoi dati restano cifrati sul tuo dispositivo." />
   <meta name="theme-color" content="#06100F" />
   <meta property="og:title" content="Quadra — I conti quadrano" />
-  <meta property="og:description" content="App di finanza personale. Movimenti, regole automatiche, report mensili." />
+  <meta property="og:description" content="Bilancio personale Zero-Knowledge. Cifratura AES-256, partita doppia, report annuali. iOS · Android · macOS." />
   <meta property="og:image" content="assets/quadra/preview/mark-512.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://quadra.gioia.ovh/" />
@@ -40,9 +40,9 @@
       </a>
       <nav class="nav">
         <a href="#funzioni">Funzioni</a>
+        <a href="#piani">Piani</a>
         <a href="#download">Scarica</a>
         <a href="supporto.html">Supporto</a>
-        <a href="#contatti">Contatti</a>
       </nav>
     </div>
   </header>
@@ -51,9 +51,9 @@
   <section class="hero" data-screen-label="02 Hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">app di finanza personale · v1.0</span>
+        <span class="eyebrow">finanza personale zero-knowledge · v3.7.0</span>
         <h1 class="h-display h-1">I conti<br /><span class="accent">quadrano.</span></h1>
-        <p class="lead">Quadra è il quaderno dove ogni euro trova il suo posto. Movimenti, regole automatiche, report mensili — senza fronzoli, senza pubblicità, senza condividere un solo dato.</p>
+        <p class="lead">Bilancio familiare con cifratura locale AES-256, partita doppia nativa e regole automatiche. Niente account, niente cloud obbligatorio, niente tracker — la tua Master Password è l'unica chiave, e non esiste nemmeno per noi.</p>
         <div class="cta-row">
           <a class="btn primary" href="#download">
             <span>Scarica l'app</span>
@@ -75,10 +75,10 @@
 
   <!-- ─── Numbers strip ───────────────────────────────── -->
   <div class="numbers-strip" data-screen-label="03 Stats">
-    <div class="stat"><span class="v">0</span><span class="k">dati lasciano il telefono</span></div>
-    <div class="stat"><span class="v">0</span><span class="k">account · 0 registrazione</span></div>
-    <div class="stat"><span class="v">CSV</span><span class="k">import da ogni banca</span></div>
-    <div class="stat"><span class="v">IFTTT</span><span class="k">regole automatiche</span></div>
+    <div class="stat"><span class="v">AES-256</span><span class="k">cifratura locale · Argon2id</span></div>
+    <div class="stat"><span class="v">0</span><span class="k">tracker · analytics · ads</span></div>
+    <div class="stat"><span class="v">CSV·XLS·XLSX</span><span class="k">import multiformato OTA</span></div>
+    <div class="stat"><span class="v">IT · EN</span><span class="k">iOS · Android · macOS</span></div>
   </div>
 
   <!-- ─── Funzioni · grid ─────────────────────────────── -->
@@ -86,40 +86,40 @@
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">funzioni</span>
-        <h2 class="h-display h-2">Tutto quello che serve.<br />Niente di più.</h2>
-        <p class="lead">Sei pilastri pensati per chi vuole capire dove vanno i propri soldi senza diventare un contabile.</p>
+        <h2 class="h-display h-2">Sei pilastri.<br />Un'app che fa quadrato.</h2>
+        <p class="lead">Da una semplice Master Password parte tutto: cifratura del database, partita doppia, import bancario, regole automatiche, report e backup. Senza compromessi sulla privacy.</p>
       </div>
 
       <div class="grid-3">
         <div class="cell">
           <span class="num">01</span>
-          <h3>Movimenti<br />in chiaro</h3>
-          <p>Entrate e uscite con categoria, portafoglio, nota e tag. Cerca per importo, periodo, parola: trovi tutto in un secondo.</p>
+          <h3>Zero-Knowledge<br />by design</h3>
+          <p>Database SQLCipher AES-256, chiave derivata con Argon2id (m=64 MiB, t=3, p=4). La chiave vive solo in RAM, mai su disco. Nessuna procedura di reset password: nemmeno noi possiamo entrare.</p>
         </div>
         <div class="cell">
           <span class="num">02</span>
-          <h3>Regole IFTTT</h3>
-          <p>Crea regole automatiche: <em>se la descrizione contiene "Esselunga" allora categoria Spesa</em>. Quadra impara dal tuo storico.</p>
+          <h3>Partita doppia<br />nativa</h3>
+          <p>Ogni transazione ha conto di addebito e accredito. Saldo calcolato dinamicamente, opening balance esplicito, riconciliazione con la banca, giroconti tracciati su entrambi i lati. Anche split-reconciliation.</p>
         </div>
         <div class="cell">
           <span class="num">03</span>
-          <h3>Import CSV</h3>
-          <p>Importa l'estratto conto della tua banca: Quadra deduplica, categorizza e ti chiede solo i casi ambigui.</p>
+          <h3>Import OTA<br />multiformato</h3>
+          <p>CSV, XLS (BIFF8) e XLSX letti da un parser unificato che segue profili JSON scaricabili over-the-air. Nuove banche senza aggiornare l'app. Parser Builder integrato per profili personalizzati.</p>
         </div>
         <div class="cell">
           <span class="num">04</span>
-          <h3>Report mensili</h3>
-          <p>Bilancio del mese, spese per categoria, confronto con il mese prima. Esporta in PDF quando ti serve.</p>
+          <h3>Motore regole<br />IFTTT</h3>
+          <p>Condizioni multiple, regex opzionale, filtri per direzione e importo. Wizard che propone regole partendo dai movimenti non categorizzati. Riapplica tutto con anteprima.</p>
         </div>
         <div class="cell">
           <span class="num">05</span>
-          <h3>Portafogli multipli</h3>
-          <p>Conto corrente, contanti, carte: tieni traccia separata di ognuno e vedi il saldo aggregato in dashboard.</p>
+          <h3>Liquidità<br />o Budget</h3>
+          <p>Due lenti persistenti per archivio. La Dashboard ti dice se sei in attivo, dove finiscono i soldi e quanto risparmi davvero — separando cassa e budget.</p>
         </div>
         <div class="cell">
           <span class="num">06</span>
-          <h3>Categorie tue</h3>
-          <p>Le categorie predefinite sono un punto di partenza. Crea, rinomina, accorpa, archivia: la tassonomia è la tua.</p>
+          <h3>Cloud Backup<br />& archivio .quadra</h3>
+          <p>Backup zero-knowledge su Google Drive o iCloud (opzionale), automatico programmabile. Archivio <code style="font-family:var(--mono);font-size:12px;color:var(--gold);">.quadra</code> esportabile e apribile direttamente dal sistema operativo.</p>
         </div>
       </div>
     </div>
@@ -130,18 +130,17 @@
     <div class="wrap">
       <div class="feature-row">
         <div class="feature-copy">
-          <span class="eyebrow">dashboard mensile</span>
+          <span class="eyebrow">dashboard duale</span>
           <h3>Sai sempre come sta andando il mese.</h3>
-          <p>Una sola schermata ti dice se sei in attivo o in passivo, quanto hai risparmiato e dove sono finiti i soldi. Niente grafici da analista finanziario — solo i numeri che contano.</p>
+          <p>Una schermata ti dice se sei in attivo, quanto hai risparmiato e dove sono finiti i soldi. Niente grafici da analista — solo i numeri che contano, con la lente giusta.</p>
           <ul class="bullets">
-            <li>Risultato del mese in evidenza, confronto con il mese prima</li>
-            <li>Top spese per categoria con barra di proporzione</li>
-            <li>Saldo aggregato di tutti i portafogli</li>
-            <li>Cambia mese con un tap, lo storico è infinito</li>
+            <li>KPI mensili: entrate, uscite, risparmio netto, Savings Rate, badge di variazione vs mese precedente</li>
+            <li>Modalità Liquidità o Budget — due viste persistenti per archivio</li>
+            <li>Card cashflow per ogni portafoglio con bar chart, progress bar e KPI</li>
+            <li>Cambio mese con un tap (anche swipe), storico illimitato dal piano Premium</li>
           </ul>
         </div>
         <div class="feature-art">
-          <!-- mini phone visual (placeholder, non viene mai vista a piena res) -->
           <div class="phone-shell">
             <div class="phone-screen">
               <div style="display:flex;justify-content:space-between;align-items:center;">
@@ -149,11 +148,12 @@
                 <span style="font-family:var(--mono);font-size:9px;color:var(--muted);">↓ 23.4%</span>
               </div>
               <div style="border:1px solid var(--gold-hair);padding:14px;border-radius:2px;background:rgba(212,175,55,0.04);">
-                <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.18em;margin-bottom:4px;">RISULTATO</div>
+                <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.18em;margin-bottom:4px;">RISULTATO · LIQUIDITÀ</div>
                 <div style="font-family:var(--serif);font-style:italic;font-size:34px;color:var(--gold);font-weight:500;line-height:1;">+€847,50</div>
                 <div style="display:flex;gap:12px;margin-top:12px;font-family:var(--mono);font-size:10px;">
                   <span style="color:var(--ivory);">↑ €3.620</span>
                   <span style="color:var(--muted);">↓ €2.772</span>
+                  <span style="color:var(--gold);">SR 23%</span>
                 </div>
               </div>
               <div style="display:flex;flex-direction:column;gap:8px;">
@@ -179,14 +179,14 @@
     <div class="wrap">
       <div class="feature-row reverse">
         <div class="feature-copy">
-          <span class="eyebrow">regole ifttt</span>
+          <span class="eyebrow">regole ifttt + wizard</span>
           <h3>Categorizza una volta. Per sempre.</h3>
-          <p>Le regole di Quadra leggono i tuoi movimenti come faresti tu, a mente: parola chiave, importo, portafoglio, periodo. Funzionano in tempo reale al momento dell'import.</p>
+          <p>Le regole leggono i movimenti come faresti tu: parola chiave, importo, direzione, portafoglio. Il wizard analizza i movimenti non categorizzati e ti propone le regole giuste — gestendo anche i giroconti.</p>
           <ul class="bullets">
-            <li>Wizard guidato: crei una regola partendo da un movimento esistente</li>
-            <li>Condizioni multiple in AND / OR, niente regex se non vuoi</li>
-            <li>Anteprima: vedi quanti movimenti vecchi vengono catturati prima di salvare</li>
-            <li>Le regole sono modificabili, disattivabili, esportabili</li>
+            <li>Sei operatori: contiene, inizia, finisce, uguale, regex, "contiene tutte"</li>
+            <li>Filtri per direzione e importo (&gt;, &lt;, intervallo); priorità con drag-and-drop</li>
+            <li>Wizard "Regole da transazioni non categorizzate" con detection automatica giroconti</li>
+            <li>Riapplica tutto con preview: rielabora lo storico in batch ottimizzato</li>
           </ul>
         </div>
         <div class="feature-art">
@@ -219,21 +219,58 @@
     </div>
   </section>
 
-  <!-- ─── Feature row 3 — Privacy ──────────────────────── -->
-  <section data-screen-label="07 Feature · Privacy">
+  <!-- ─── Feature row 3 — Import OTA ──────────────────── -->
+  <section data-screen-label="07 Feature · Import OTA">
     <div class="wrap">
       <div class="feature-row">
         <div class="feature-copy">
-          <span class="eyebrow">privacy by design</span>
-          <h3>I tuoi dati restano tuoi.</h3>
-          <p>Quadra <strong>non ha un server</strong>. I tuoi movimenti, le categorie, le regole vivono soltanto sul tuo telefono. Niente account, niente registrazione, niente cloud, niente tracker, niente terze parti. Zero-knowledge per progettazione: nemmeno noi possiamo vedere i tuoi numeri.</p>
+          <span class="eyebrow">motore ota di import</span>
+          <h3>Tutti i tracciati. Nessun aggiornamento.</h3>
+          <p>Un parser unificato interpreta CSV, XLS e XLSX seguendo profili JSON scaricabili over-the-air. Aggiungere una nuova banca non richiede un update dell'app — basta un nuovo profilo. E se la tua banca non c'è, il Parser Builder ti guida a crearne uno da un file di esempio.</p>
           <ul class="bullets">
-            <li>Tutti i dati restano sul dispositivo — mai trasmessi in rete</li>
-            <li>Nessun account, nessuna email, nessuna password</li>
-            <li>Esportazione completa dei tuoi dati in JSON o CSV</li>
-            <li>Disinstalli l'app? I tuoi dati spariscono con essa</li>
+            <li>Profili predefiniti: BPER, Revolut, BCC, Satispay e altre — sempre in aggiornamento</li>
+            <li>Flusso a 4 step: selezione → analisi → staging → conferma</li>
+            <li>Rilevamento duplicati con hash deterministici</li>
+            <li>Transfer Matcher: riconosce automaticamente i giroconti già registrati (±N giorni)</li>
           </ul>
-          <div style="margin-top:28px;display:flex;gap:18px;align-items:center;">
+        </div>
+        <div class="feature-art">
+          <div class="phone-shell">
+            <div class="phone-screen" style="gap:10px;">
+              <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.18em;color:var(--gold);">STAGING · REVOLUT</div>
+              <div style="font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ivory);line-height:1.2;">112 movimenti<br/><span style="color:var(--gold);font-size:13px;">3 duplicati · 8 giroconti</span></div>
+              <div style="border-top:1px solid var(--gold-hair);padding-top:10px;display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ivory);"><span>15 apr · LIDL</span><span style="font-family:var(--mono);color:var(--gold);">−€42,30</span></div>
+                <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.1em;">→ Spesa</div>
+                <div style="height:1px;background:var(--gold-hair);"></div>
+                <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ivory);"><span>14 apr · NEXI</span><span style="font-family:var(--mono);color:var(--ivory);">€180,00</span></div>
+                <div style="font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:0.1em;">⇄ Giroconto · CC → Nexi</div>
+                <div style="height:1px;background:var(--gold-hair);"></div>
+                <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted-2);"><span>13 apr · ENEL</span><span style="font-family:var(--mono);">−€72,10</span></div>
+                <div style="font-family:var(--mono);font-size:9px;color:var(--muted-2);letter-spacing:0.1em;">⊘ Duplicato — già presente</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Feature row 4 — Privacy / Zero-Knowledge ──── -->
+  <section data-screen-label="08 Feature · Zero-Knowledge">
+    <div class="wrap">
+      <div class="feature-row reverse">
+        <div class="feature-copy">
+          <span class="eyebrow">zero-knowledge architecture</span>
+          <h3>I tuoi numeri restano tuoi.<br />Anche nel backup.</h3>
+          <p>Il database vive cifrato sul tuo dispositivo. La Master Password non lascia mai la RAM, e dalla password si deriva localmente la chiave AES via Argon2id. Sul disco ci sono solo salt e verifier SHA-256 — niente di recuperabile, neanche da noi.</p>
+          <ul class="bullets">
+            <li>SQLCipher (AES-256-CBC) via Drift encrypted extension</li>
+            <li>Biometria hardware-backed: Secure Enclave (iOS) / Android Keystore</li>
+            <li>Cloud Backup zero-knowledge: solo file <code style="font-family:var(--mono);font-size:12px;color:var(--gold);">.db</code> cifrato caricato; mai chiavi in chiaro</li>
+            <li>Nessun analytics, crash reporting, push, ads ID o tracciamento</li>
+          </ul>
+          <div style="margin-top:28px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
             <a href="privacy.html" class="btn" style="height:44px;font-size:13px;">Privacy Policy</a>
             <a href="termini.html" style="font-size:13px;color:var(--muted);border-bottom:1px solid var(--gold-hair);padding-bottom:2px;">Termini di servizio</a>
           </div>
@@ -243,13 +280,13 @@
             <div style="position:absolute;inset:0;border:1px solid var(--gold-hair);border-radius:50%;"></div>
             <div style="position:absolute;inset:14%;border:1px solid var(--gold-hair);border-radius:50%;opacity:0.6;"></div>
             <div style="position:absolute;inset:28%;border:1px solid var(--gold-hair);border-radius:50%;opacity:0.4;"></div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2;text-align:center;padding:0 24px;">
               <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.4">
                 <path d="M12 2L3 6v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V6l-9-4z"/>
                 <path d="M9 12l2 2 4-4"/>
               </svg>
-              <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);">Zero-knowledge · Local-only</span>
-              <span style="font-family:var(--serif);font-style:italic;font-size:22px;color:var(--ivory);">solo sul tuo telefono</span>
+              <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);">Argon2id · AES-256 · SQLCipher</span>
+              <span style="font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ivory);line-height:1.2;">la chiave la tieni tu</span>
             </div>
           </div>
         </div>
@@ -257,12 +294,150 @@
     </div>
   </section>
 
+  <!-- ─── Feature row 5 — Backup & .quadra ─────────── -->
+  <section data-screen-label="09 Feature · Backup & .quadra">
+    <div class="wrap">
+      <div class="feature-row">
+        <div class="feature-copy">
+          <span class="eyebrow">backup & archivio .quadra</span>
+          <h3>Porta i tuoi conti con te.<br />Da un device all'altro.</h3>
+          <p>Backup automatico programmabile su Google Drive, iCloud o su una cartella locale (sincronizzabile con il cloud che preferisci). E un formato di archivio nostro — <code style="font-family:var(--mono);color:var(--gold);">.quadra</code> — che il sistema operativo riconosce e apre direttamente in app.</p>
+          <ul class="bullets">
+            <li>Backup giornaliero, settimanale o mensile in background; retention configurabile</li>
+            <li>Cartella locale persistente (SAF su Android, security-scoped bookmark su iOS)</li>
+            <li>Archivio <code style="font-family:var(--mono);font-size:12px;color:var(--gold);">.quadra</code> con magic header <code style="font-family:var(--mono);font-size:12px;color:var(--gold);">QUADv1</code>, opzionalmente cifrato AES-GCM</li>
+            <li>Apertura nativa da Files, mail, AirDrop, Drive — con avviso esplicito sulle sovrascritture</li>
+          </ul>
+        </div>
+        <div class="feature-art">
+          <div style="display:flex;flex-direction:column;gap:14px;align-items:stretch;width:100%;max-width:340px;padding:24px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-family:var(--mono);font-size:10px;letter-spacing:0.18em;color:var(--gold);">CLOUD BACKUP</span>
+              <span style="font-family:var(--mono);font-size:9px;color:var(--muted);">26 MAG · 03:00</span>
+            </div>
+            <div style="border:1px solid var(--gold-hair);padding:16px;background:var(--card);">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                <span style="font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ivory);">quadra_backup.zip</span>
+              </div>
+              <div style="font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:0.05em;line-height:1.7;">
+                📦 4 archivi · 12.3 MB<br/>
+                🔒 AES-256 — cifrato a riposo<br/>
+                ⟲ Retention: 3 versioni
+              </div>
+            </div>
+            <div style="border:1px solid var(--gold-dim);padding:16px;background:rgba(212,175,55,0.04);">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+                <span style="font-family:var(--mono);font-size:10px;color:var(--gold);letter-spacing:0.2em;">FILE</span>
+                <span style="font-family:var(--mono);font-size:11px;color:var(--ivory);">famiglia_2026.quadra</span>
+              </div>
+              <div style="font-family:var(--mono);font-size:10px;color:var(--muted);">apri direttamente da Files / Mail / AirDrop</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Piani / Pricing ─────────────────────────────── -->
+  <section id="piani" data-screen-label="10 Piani">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">piani</span>
+        <h2 class="h-display h-2">Tre livelli.<br />Nessun trucco.</h2>
+        <p class="lead">Free è sempre Free. La Modalità Demo è gratuita per chiunque. Premium e Pro sbloccano lo storico illimitato e i flussi più potenti — gestiti via App Store / Play Store, niente account, niente carta sul nostro sito.</p>
+      </div>
+
+      <div class="plans-grid">
+        <div class="plan-card">
+          <span class="tier-label">Free</span>
+          <div class="tier-name">Free</div>
+          <p class="tier-tagline">Per iniziare. Tutto l'essenziale per tenere d'occhio il mese.</p>
+          <ul class="plan-features">
+            <li>Storico ultimi 3 mesi</li>
+            <li>2 portafogli</li>
+            <li>1 archivio</li>
+            <li>Modalità Demo sempre disponibile</li>
+            <li>Tutte le funzioni core (movimenti, regole, dashboard)</li>
+            <li class="dim">Cloud Backup</li>
+            <li class="dim">Export Excel · PDF</li>
+          </ul>
+        </div>
+        <div class="plan-card featured">
+          <span class="pop-pill">Più scelto</span>
+          <span class="tier-label">Premium</span>
+          <div class="tier-name">Premium</div>
+          <p class="tier-tagline">Per uso continuativo. Storico illimitato e backup cifrato sul cloud.</p>
+          <ul class="plan-features">
+            <li>Storico <strong>illimitato</strong></li>
+            <li>4 portafogli</li>
+            <li>2 archivi</li>
+            <li>Cloud Backup (Drive / iCloud)</li>
+            <li>Backup automatico programmabile</li>
+            <li>Tutte le funzioni Free</li>
+            <li class="dim">Export Excel · PDF</li>
+          </ul>
+        </div>
+        <div class="plan-card">
+          <span class="tier-label">Pro</span>
+          <div class="tier-name">Pro</div>
+          <p class="tier-tagline">Per chi cura il bilancio sul serio. Niente limiti, report completi, export.</p>
+          <ul class="plan-features">
+            <li>Storico illimitato</li>
+            <li>Portafogli illimitati</li>
+            <li>Archivi illimitati</li>
+            <li>Cloud Backup</li>
+            <li>Export Excel (6 fogli con formule)</li>
+            <li>Export PDF</li>
+            <li>Cloud Sync multi-device <em style="color:var(--muted);font-style:italic;">— in arrivo</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="pricing-footnote">Acquisti gestiti tramite RevenueCat e dallo store ufficiale (App Store · Play Store). I prezzi compaiono direttamente nella schermata Abbonamento dell'app, mensili o annuali.</p>
+    </div>
+  </section>
+
+  <!-- ─── Architettura tecnica ─────────────────────── -->
+  <section data-screen-label="11 Architettura">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">architettura</span>
+        <h2 class="h-display h-2">Flutter, Drift, Riverpod.<br />Riproducibile, testabile, locale.</h2>
+        <p class="lead">Nessun "tira la leva e spera". Quadra è scritta in modo da poter ricostruire ogni saldo dalla catena delle transazioni, ogni volta. Niente campi statici, niente magia.</p>
+      </div>
+
+      <div class="spec-strip">
+        <div class="spec">
+          <span class="label">Framework</span>
+          <span class="value">Flutter 3.x</span>
+          <span class="meta">iOS · Android · macOS</span>
+        </div>
+        <div class="spec">
+          <span class="label">Database</span>
+          <span class="value">Drift + SQLCipher</span>
+          <span class="meta">AES-256 locale</span>
+        </div>
+        <div class="spec">
+          <span class="label">Crypto</span>
+          <span class="value">Argon2id</span>
+          <span class="meta">OWASP 2024 · 64 MiB · 3 iter · 4 par</span>
+        </div>
+        <div class="spec">
+          <span class="label">State</span>
+          <span class="value">Riverpod 3.x</span>
+          <span class="meta">Freezed sealed · GoRouter</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Download ───────────────────────────────────── -->
-  <section id="download" data-screen-label="08 Download">
+  <section id="download" data-screen-label="12 Download">
     <div class="wrap" style="text-align:center;">
       <span class="eyebrow" style="margin-bottom:18px;display:block;">scarica quadra</span>
       <h2 class="h-display h-2" style="margin-bottom:22px;">Inizia a quadrare<br />il tuo bilancio.</h2>
-      <p class="lead" style="margin:0 auto 48px;">Disponibile per iOS e Android. Gratuita per uso personale.</p>
+      <p class="lead" style="margin:0 auto 48px;">Disponibile per iOS, Android e macOS. Free senza scadenze. Modalità Demo per provarla a fondo prima di iniziare con i tuoi dati.</p>
 
       <div class="store-row" style="justify-content:center;">
         <a class="store-badge" href="#" aria-label="Scarica su App Store">
@@ -282,6 +457,16 @@
           <div class="stack">
             <span class="small">Disponibile su</span>
             <span class="big">Google Play</span>
+          </div>
+          <span class="pill">Prossimamente</span>
+        </a>
+        <a class="store-badge" href="#" aria-label="Disponibile per macOS">
+          <svg class="glyph" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          <div class="stack">
+            <span class="small">Disponibile per</span>
+            <span class="big">macOS</span>
           </div>
           <span class="pill">Prossimamente</span>
         </a>
@@ -308,11 +493,12 @@
             <span style="font-family:var(--serif);font-style:italic;font-size:26px;color:var(--ivory);">Quadra</span>
           </div>
           <div class="claim">I conti quadrano.</div>
-          <p style="font-size:13px;">App di finanza personale by Antonio Gioia.</p>
+          <p style="font-size:13px;">App di finanza personale Zero-Knowledge by Antonio Gioia.</p>
         </div>
         <div class="footer-col">
           <h4>Prodotto</h4>
           <a href="#funzioni">Funzioni</a>
+          <a href="#piani">Piani</a>
           <a href="#download">Scarica</a>
           <a href="privacy.html">Privacy first</a>
         </div>
@@ -325,13 +511,13 @@
         <div class="footer-col">
           <h4>Supporto</h4>
           <a href="supporto.html">Centro assistenza</a>
-          <a href="mailto:quadra@gioia.ovh">quadra@gioia.ovh</a>
-          <a href="supporto.html#status">Stato servizio</a>
+          <a href="mailto:info@gioia.ovh">info@gioia.ovh</a>
+          <a href="supporto.html#architettura">Architettura local-only</a>
         </div>
       </div>
       <div class="footer-meta">
         <span>© 2026 Antonio Gioia · Tutti i diritti riservati</span>
-        <span>quadra.gioia.ovh · v1.0</span>
+        <span>quadra.gioia.ovh · v3.7.0</span>
       </div>
     </div>
   </footer>

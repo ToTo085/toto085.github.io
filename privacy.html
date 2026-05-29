@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Quadra</title>
-  <meta name="description" content="Informativa privacy di Quadra: i tuoi dati restano solo sul tuo dispositivo. Zero-knowledge, local-only." />
+  <meta name="description" content="Informativa privacy di Quadra: Zero-Knowledge, cifratura locale AES-256 con Argon2id, nessun analytics né tracking. Servizi cloud solo opt-in." />
   <meta name="theme-color" content="#06100F" />
   <link rel="icon" type="image/svg+xml" href="assets/quadra/web/favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/quadra/web/apple-touch-icon.png" />
@@ -29,6 +29,7 @@
       </a>
       <nav class="nav">
         <a href="index.html#funzioni">Funzioni</a>
+        <a href="index.html#piani">Piani</a>
         <a href="index.html#download">Scarica</a>
         <a href="supporto.html">Supporto</a>
         <a href="privacy.html" class="active">Privacy</a>
@@ -38,141 +39,122 @@
 
   <main class="legal" data-screen-label="Privacy Policy">
     <span class="eyebrow kicker">Informativa privacy</span>
-    <h1>Privacy Policy</h1>
-    <span class="updated">Versione 1.0 · ultimo aggiornamento: 23 maggio 2026</span>
+    <h1>Informativa sulla privacy</h1>
+    <span class="updated">Ai sensi del Regolamento (UE) 2016/679 (GDPR) · ultimo aggiornamento: 27 maggio 2026</span>
 
     <div class="callout">
-      <p><strong>In breve.</strong> Quadra non ha un server. Non chiede registrazione, non crea account, non raccoglie alcun dato. Tutti i tuoi movimenti, categorie e regole restano <strong>esclusivamente sul tuo dispositivo</strong>. Né noi, né terze parti, possiamo vederli. Zero-knowledge non come slogan: come architettura.</p>
+      <p><strong>In breve.</strong> Quadra è Zero-Knowledge: i dati finanziari vivono cifrati sul tuo dispositivo, protetti dalla tua Master Password che non viene mai trasmessa né conservata. L'app non utilizza analytics, crash reporting, push o tracker. Gli unici servizi esterni — RevenueCat, Google Drive, iCloud, GitHub, Google Fonts — entrano in gioco solo quando attivi esplicitamente una funzione.</p>
     </div>
 
     <div class="toc">
       <h4>Indice</h4>
       <ol>
         <li><a href="#titolare">Titolare del trattamento</a></li>
-        <li><a href="#sintesi">Sintesi: cosa NON facciamo</a></li>
-        <li><a href="#dati-locali">I dati sul tuo dispositivo</a></li>
-        <li><a href="#permessi">Permessi richiesti dall'app</a></li>
-        <li><a href="#stores">Apple App Store e Google Play</a></li>
-        <li><a href="#sito">Sito web quadra.gioia.ovh</a></li>
-        <li><a href="#diritti">I tuoi diritti</a></li>
+        <li><a href="#principio">Principio Zero-Knowledge</a></li>
+        <li><a href="#dati-locali">Dati trattati localmente</a></li>
+        <li><a href="#opzionali">Servizi opzionali</a></li>
+        <li><a href="#tecnici">Servizi tecnici automatici</a></li>
+        <li><a href="#base">Base giuridica</a></li>
+        <li><a href="#extra-ue">Trasferimento extra-UE</a></li>
+        <li><a href="#conservazione">Periodo di conservazione</a></li>
+        <li><a href="#diritti">Diritti dell'interessato</a></li>
+        <li><a href="#reclamo">Reclamo all'Autorità</a></li>
+        <li><a href="#cookie">Cookie e tracker</a></li>
         <li><a href="#minori">Minori</a></li>
-        <li><a href="#cookie">Cookie e tecnologie simili</a></li>
         <li><a href="#modifiche">Modifiche all'informativa</a></li>
       </ol>
     </div>
 
     <h2 id="titolare"><span class="num">01</span>Titolare del trattamento</h2>
-    <p>L'app <strong>Quadra</strong> e il sito vetrina <strong>quadra.gioia.ovh</strong> sono progetto personale di:</p>
-    <p>
-      <strong>Antonio Gioia</strong><br />
-      Italia<br />
-      Email: <a href="mailto:quadra@gioia.ovh">quadra@gioia.ovh</a>
-    </p>
-    <p>Poiché Quadra non raccoglie né tratta dati personali sui propri sistemi, di fatto non si configura alcuna attività di trattamento ai sensi del GDPR. Il titolare resta comunque disponibile per chiarimenti all'indirizzo email indicato.</p>
+    <p>Titolare del trattamento dei dati personali è <strong>Antonio Gioia</strong>, con sede in Italia. Email di contatto: <a href="mailto:info@gioia.ovh">info@gioia.ovh</a>.</p>
+    <p>Per qualsiasi richiesta relativa al trattamento dei dati personali puoi scrivere all'email indicata. Il presente documento è speculare al testo mostrato in-app (Impostazioni App → Privacy) e costituisce la fonte di riferimento per il sito web e per gli store.</p>
 
-    <h2 id="sintesi"><span class="num">02</span>Sintesi: cosa NON facciamo</h2>
-    <p>Per progettazione, Quadra:</p>
+    <h2 id="principio"><span class="num">02</span>Principio di funzionamento (Zero-Knowledge)</h2>
+    <p>L'app è progettata secondo il principio <strong>Zero-Knowledge</strong>: tutti i dati finanziari (transazioni, conti, categorie, regole, preferenze) sono memorizzati esclusivamente sul tuo dispositivo all'interno di un database cifrato con algoritmo <strong>AES-256 (SQLCipher)</strong>, protetto dalla tua Master Password.</p>
+    <p>La Master Password non viene mai trasmessa, sincronizzata o memorizzata in chiaro: dal suo valore viene derivata localmente la chiave di cifratura tramite <strong>Argon2id</strong> (parametri OWASP 2024: m = 64 MiB, t = 3, p = 4). Il Titolare non è in grado di leggere, recuperare o ricostruire la tua Master Password né i dati in essa protetti.</p>
+
+    <h2 id="dati-locali"><span class="num">03</span>Dati trattati localmente</h2>
+    <p>Sul tuo dispositivo l'app memorizza:</p>
     <ul>
-      <li><strong>Non ha un server.</strong> Non esiste un backend a cui l'app si connetta per salvare i tuoi dati.</li>
-      <li><strong>Non chiede registrazione.</strong> Nessun account, nessuna email, nessuna password.</li>
-      <li><strong>Non raccoglie alcun dato personale</strong> — né anagrafico, né di contatto, né finanziario.</li>
-      <li><strong>Non si collega al tuo conto bancario.</strong> Non utilizziamo Open Banking o PSD2.</li>
-      <li><strong>Non usa SDK di analytics, pubblicitari o di tracking.</strong></li>
-      <li><strong>Non condivide dati con terze parti</strong> per finalità commerciali o di profilazione.</li>
-      <li><strong>Non trasferisce dati extra-UE</strong>, perché non trasferisce dati e basta.</li>
+      <li>transazioni, importi, descrizioni, date;</li>
+      <li>conti, categorie, regole di automazione;</li>
+      <li>preferenze utente (tema, lingua, valuta, formato numerico);</li>
+      <li>salt e verifier crittografici per la verifica della Master Password (mai la password in chiaro);</li>
+      <li>impostazioni di backup automatico.</li>
     </ul>
+    <p>Questi dati <strong>non escono mai dal dispositivo</strong> a meno che tu non attivi esplicitamente uno dei servizi opzionali descritti più sotto.</p>
 
+    <h2 id="opzionali"><span class="num">04</span>Servizi opzionali attivati dall'utente</h2>
+    <p>Su tua esplicita richiesta puoi attivare i seguenti servizi cloud:</p>
+    <ul>
+      <li><strong>Google Drive</strong> (Google LLC, USA). L'app utilizza la procedura Google Sign-In per ottenere l'autorizzazione (scope <code>drive.file</code>: solo i file creati dall'app sono visibili). Vengono trasmessi: l'indirizzo email del tuo account Google, il file di backup ZIP contenente il database <strong>già cifrato sul dispositivo</strong>, e un manifest con i metadati dei backup. Il contenuto resta inaccessibile a Google perché protetto dalla tua Master Password.</li>
+      <li><strong>Apple iCloud</strong> (Apple Inc., USA — solo iOS/macOS). I file di backup, già cifrati sul dispositivo, vengono caricati nel contenitore iCloud dedicato all'app. Si utilizza l'account iCloud configurato a livello di sistema operativo; nessuna credenziale viene gestita dall'app.</li>
+    </ul>
+    <p>In entrambi i casi puoi disattivare il servizio e revocare l'accesso in qualsiasi momento dalle impostazioni del rispettivo provider.</p>
+
+    <h2 id="tecnici"><span class="num">05</span>Servizi tecnici automatici</h2>
+    <p>Per il funzionamento dell'app sono attivi i seguenti servizi tecnici:</p>
+    <ul>
+      <li><strong>RevenueCat, Inc.</strong> (USA) — gestisce gli abbonamenti in-app. Riceve il codice ricevuta dell'acquisto rilasciato dallo store (App Store / Google Play), un identificativo tecnico del dispositivo, il paese e la valuta. Non riceve email, nome o dati finanziari dell'app.</li>
+      <li><strong>GitHub, Inc.</strong> (USA) — l'app scarica periodicamente i profili di parsing CSV per le banche supportate da un repository pubblico. La richiesta HTTP comporta la trasmissione del tuo indirizzo IP a GitHub. Nessun dato dell'app viene inviato.</li>
+      <li><strong>Google Fonts</strong> (Google LLC, USA) — utilizzato per il download dei font usati nell'interfaccia. La richiesta HTTP comporta la trasmissione del tuo indirizzo IP. Dopo il primo download i font vengono memorizzati in cache locale.</li>
+    </ul>
     <div class="callout">
-      <p>L'unica eccezione sono i metadati tecnici raccolti da <strong>Apple</strong> e <strong>Google</strong> al momento del download dell'app dai rispettivi store, sui quali Quadra non ha visibilità né controllo. Vedi <a href="#stores">sezione 05</a>.</p>
+      <p>L'app <strong>NON</strong> utilizza strumenti di analytics (Google Analytics, Firebase Analytics, Mixpanel, Amplitude), crash reporting (Sentry, Crashlytics), push notification, identificatori pubblicitari, fingerprinting o tracking pubblicitario.</p>
     </div>
 
-    <h2 id="dati-locali"><span class="num">03</span>I dati sul tuo dispositivo</h2>
-    <p>Quando usi Quadra, i seguenti dati vengono creati e conservati <strong>esclusivamente nella memoria interna del tuo dispositivo</strong>, in un database locale gestito dal sistema operativo (iOS o Android):</p>
+    <h2 id="base"><span class="num">06</span>Base giuridica</h2>
+    <p>Il trattamento dei dati avviene sulle seguenti basi giuridiche ai sensi dell'art. 6 GDPR:</p>
     <ul>
-      <li><strong>Movimenti</strong>: data, importo, descrizione, categoria, portafoglio, nota, eventuali tag;</li>
-      <li><strong>Categorie e portafogli</strong> che hai personalizzato;</li>
-      <li><strong>Regole IFTTT</strong> di categorizzazione automatica;</li>
-      <li><strong>Preferenze dell'app</strong>: tema, valuta predefinita, layout.</li>
+      <li><strong>art. 6.1.b</strong> (esecuzione del contratto): gestione dell'abbonamento tramite RevenueCat;</li>
+      <li><strong>art. 6.1.a</strong> (consenso): attivazione del backup su Google Drive o iCloud;</li>
+      <li><strong>art. 6.1.f</strong> (legittimo interesse): download dei profili parser bancari e dei font, necessari al corretto funzionamento dell'app.</li>
+    </ul>
+    <p>Il conferimento dei dati per i servizi opzionali è facoltativo: il rifiuto comporta unicamente l'impossibilità di utilizzare la specifica funzione.</p>
+
+    <h2 id="extra-ue"><span class="num">07</span>Trasferimento di dati extra-UE</h2>
+    <p>I fornitori di servizi tecnici sopra elencati (Google, Apple, RevenueCat, GitHub) hanno sede negli Stati Uniti d'America. Il trasferimento dei dati avviene sulla base delle <strong>Clausole Contrattuali Standard</strong> approvate dalla Commissione Europea e, ove applicabile, dell'<strong>EU-U.S. Data Privacy Framework</strong>. Per maggiori dettagli puoi consultare le rispettive informative privacy.</p>
+
+    <h2 id="conservazione"><span class="num">08</span>Periodo di conservazione</h2>
+    <ul>
+      <li><strong>Dati locali sul dispositivo</strong>: conservati finché non disinstalli l'app o cancelli manualmente i singoli archivi.</li>
+      <li><strong>Backup su Google Drive / iCloud</strong>: conservati finché non li elimini esplicitamente dalle impostazioni dell'app o direttamente dal provider cloud. L'app mantiene a rotazione le ultime versioni configurate.</li>
+      <li><strong>Dati su RevenueCat</strong>: conservati secondo la policy di retention del fornitore, tipicamente per la durata dell'abbonamento e un periodo successivo per finalità fiscali e antifrode.</li>
     </ul>
 
-    <p>Questi dati:</p>
+    <h2 id="diritti"><span class="num">09</span>Diritti dell'interessato</h2>
+    <p>Ai sensi degli artt. 15-22 GDPR hai diritto, in ogni momento, di:</p>
     <ul>
-      <li><strong>Non lasciano mai il dispositivo</strong> attraverso Quadra.</li>
-      <li>Sono accessibili solo all'app, all'interno del suo <em>sandbox</em>, protetti dai meccanismi standard di isolamento di iOS e Android.</li>
-      <li>Possono essere inclusi nei <strong>backup di sistema</strong> (iCloud su iOS, Google Drive su Android) se hai abilitato il backup del dispositivo — in tal caso il backup è gestito dal sistema operativo e dalle policy del fornitore (Apple o Google), <strong>non</strong> da Quadra.</li>
-      <li>Vengono <strong>cancellati definitivamente</strong> quando disinstalli l'app o usi la funzione <em>"Cancella tutti i dati"</em> in Impostazioni.</li>
+      <li>accedere ai tuoi dati personali, ottenerne copia e conoscerne la finalità del trattamento;</li>
+      <li>ottenere la rettifica dei dati inesatti o l'integrazione di quelli incompleti;</li>
+      <li>ottenere la cancellazione (diritto all'oblio);</li>
+      <li>ottenere la limitazione del trattamento;</li>
+      <li>opporti al trattamento basato sul legittimo interesse;</li>
+      <li>ricevere i dati in formato strutturato e portabile.</li>
     </ul>
-
-    <p>Puoi esportare i tuoi dati in qualsiasi momento in formato <code>JSON</code> o <code>CSV</code> tramite <strong>Impostazioni → Esporta dati</strong>. L'esportazione produce un file salvato nello spazio di archiviazione che scegli tu (file system locale, condivisione tramite app di tua scelta): in ogni caso il flusso resta tra te e il tuo dispositivo.</p>
-
-    <h2 id="permessi"><span class="num">04</span>Permessi richiesti dall'app</h2>
-    <p>Quadra chiede al sistema operativo solo i permessi strettamente indispensabili:</p>
-    <table>
-      <thead>
-        <tr><th>Permesso</th><th>A cosa serve</th><th>Quando</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Accesso ai file</strong></td>
-          <td>Importare CSV dell'estratto conto e salvare le esportazioni</td>
-          <td>Solo se attivi import/export</td>
-        </tr>
-        <tr>
-          <td><strong>Notifiche locali</strong></td>
-          <td>Promemoria personali (es. registrare la spesa) generati e mostrati dall'app stessa, senza passare da server</td>
-          <td>Opzionale, attivabile dalle impostazioni</td>
-        </tr>
-      </tbody>
-    </table>
-    <h3>Cosa NON chiediamo</h3>
+    <p>In pratica:</p>
     <ul>
-      <li>Rubrica, posizione, microfono, fotocamera, calendario;</li>
-      <li>Connessione di rete per uso operativo (l'app funziona <strong>completamente offline</strong>);</li>
-      <li>Notifiche push remote (APNs / FCM) — Quadra non ne invia.</li>
+      <li>per i <strong>dati locali</strong>: disinstalla l'app o utilizza le funzioni <em>"Elimina per periodo"</em> e <em>"Gestione archivi"</em>;</li>
+      <li>per i <strong>backup cloud</strong>: eliminali dall'app o direttamente da Google Drive / iCloud;</li>
+      <li>per i <strong>dati su RevenueCat / Apple / Google</strong>: scrivi al rispettivo fornitore secondo le istruzioni nelle loro privacy policy.</li>
     </ul>
+    <p>Per esercitare i diritti puoi scrivere al Titolare all'email <a href="mailto:info@gioia.ovh">info@gioia.ovh</a>.</p>
 
-    <h2 id="stores"><span class="num">05</span>Apple App Store e Google Play</h2>
-    <p>Quadra è distribuita tramite gli store ufficiali. Quando scarichi l'app:</p>
-    <ul>
-      <li><strong>Apple</strong> (App Store) raccoglie dati di download, dispositivo e account Apple secondo la sua <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a>;</li>
-      <li><strong>Google</strong> (Play Store) raccoglie dati di download, dispositivo e account Google secondo la sua <a href="https://policies.google.com/privacy">Privacy Policy</a>.</li>
-    </ul>
-    <p>Questi trattamenti avvengono <strong>tra te e lo store</strong>, sotto la rispettiva titolarità di Apple Inc. e Google LLC. Quadra non ha accesso né visibilità su questi dati e non può modificarne le condizioni di trattamento.</p>
+    <h2 id="reclamo"><span class="num">10</span>Reclamo all'Autorità di controllo</h2>
+    <p>Ove ritenga che il trattamento dei suoi dati personali violi il GDPR, l'interessato ha diritto di proporre reclamo all'<strong>Autorità Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it">www.garanteprivacy.it</a>), o all'autorità di controllo del proprio Stato membro di residenza abituale.</p>
 
-    <h2 id="sito"><span class="num">06</span>Sito web quadra.gioia.ovh</h2>
-    <p>Il sito vetrina è una semplice pagina informativa statica, ospitata su infrastruttura europea (OVHcloud SAS, Francia).</p>
-    <ul>
-      <li>Non utilizza cookie di profilazione, né analytics di terze parti (Google Analytics, Meta Pixel, ecc.);</li>
-      <li>Il server può registrare in modo transitorio i normali log di accesso (indirizzo IP, user-agent, timestamp, URL richiesta) per finalità di sicurezza ed eventuale risoluzione di problemi tecnici;</li>
-      <li>I log sono ruotati e cancellati automaticamente entro <strong>30 giorni</strong>;</li>
-      <li>Le sole connessioni esterne sono verso <strong>Google Fonts</strong> per il caricamento dei font tipografici. Per evitare anche questo trasferimento puoi installare un'estensione tipo uBlock Origin / NoScript.</li>
-    </ul>
+    <h2 id="cookie"><span class="num">11</span>Cookie e tracker</h2>
+    <p>L'app non utilizza cookie, web beacon, pixel di tracciamento, identificatori pubblicitari (IDFA su iOS, AAID su Android), strumenti di profilazione né tecnologie di tracciamento cross-device. Non viene effettuata alcuna profilazione automatizzata.</p>
+    <p>Il sito vetrina <strong>quadra.gioia.ovh</strong> non utilizza cookie di profilazione né di analytics di terze parti. Il server può registrare in modo transitorio i normali log di accesso (indirizzo IP, user-agent, timestamp, URL richiesta) per finalità di sicurezza ed eventuale risoluzione di problemi tecnici; tali log sono ruotati e cancellati automaticamente entro <strong>30 giorni</strong>. L'unica connessione esterna del sito è verso Google Fonts per il caricamento dei font tipografici.</p>
 
-    <h2 id="diritti"><span class="num">07</span>I tuoi diritti</h2>
-    <p>Poiché Quadra non raccoglie i tuoi dati, non c'è alcuna richiesta di accesso, rettifica o cancellazione che dovremmo soddisfare lato server: <strong>i dati sono già esclusivamente nelle tue mani</strong>.</p>
-    <p>Concretamente:</p>
-    <ul>
-      <li><strong>Accesso</strong> → tutti i tuoi dati sono nell'app, sempre visibili e modificabili;</li>
-      <li><strong>Rettifica</strong> → modifica direttamente movimenti, categorie e regole;</li>
-      <li><strong>Cancellazione</strong> → Impostazioni → <em>Cancella tutti i dati</em>, oppure disinstalla l'app;</li>
-      <li><strong>Portabilità</strong> → Impostazioni → <em>Esporta dati</em> (JSON o CSV).</li>
-    </ul>
-    <p>Per qualsiasi domanda relativa al rispetto della tua privacy puoi sempre scrivere a <a href="mailto:quadra@gioia.ovh">quadra@gioia.ovh</a>. In caso di violazioni del GDPR puoi anche proporre reclamo al <a href="https://www.garanteprivacy.it/">Garante per la Protezione dei Dati Personali</a>.</p>
+    <h2 id="minori"><span class="num">12</span>Minori</h2>
+    <p>L'app non è destinata a minori di <strong>14 anni</strong>. Il Titolare non raccoglie consapevolmente dati personali di minori al di sotto di tale età. Qualora venga a conoscenza di un trattamento accidentale di dati di minori, provvederà alla loro pronta cancellazione.</p>
 
-    <h2 id="minori"><span class="num">08</span>Minori</h2>
-    <p>Quadra non è specificamente rivolta a minori di 16 anni. Non raccogliendo dati personali, non opera alcuna distinzione né raccolta basata sull'età. La responsabilità dell'uso dell'app da parte di minori ricade su chi ne esercita la potestà genitoriale.</p>
-
-    <h2 id="cookie"><span class="num">09</span>Cookie e tecnologie simili</h2>
-    <h3>Sito vetrina</h3>
-    <p>Il sito <strong>quadra.gioia.ovh</strong> non utilizza cookie di profilazione né di analytics. Non sono presenti cookie tecnici di prima parte. La connessione a Google Fonts può comportare il caricamento di risorse statiche senza cookie identificativi.</p>
-    <h3>App</h3>
-    <p>L'app non utilizza cookie. Le preferenze utente (tema, layout) sono salvate nel <em>local storage</em> del sistema operativo, accessibile solo all'app stessa.</p>
-
-    <h2 id="modifiche"><span class="num">10</span>Modifiche all'informativa</h2>
-    <p>Possiamo aggiornare questa informativa per riflettere cambiamenti nell'app o per adeguarci a nuove norme. La versione e la data di aggiornamento sono sempre indicate in cima. Modifiche sostanziali ti verranno comunicate tramite avviso in-app al primo avvio dopo l'aggiornamento.</p>
+    <h2 id="modifiche"><span class="num">13</span>Modifiche all'informativa</h2>
+    <p>Il Titolare si riserva il diritto di modificare la presente informativa per adeguarla a nuove normative o a modifiche delle funzionalità dell'app. La versione aggiornata sarà sempre consultabile in questa sezione; le modifiche sostanziali saranno segnalate tramite avviso in-app.</p>
 
     <div class="callout">
-      <p><strong>Hai domande?</strong> Scrivi a <a href="mailto:quadra@gioia.ovh">quadra@gioia.ovh</a>. Rispondiamo entro 48 ore lavorative.</p>
+      <p><strong>Hai domande?</strong> Scrivi a <a href="mailto:info@gioia.ovh">info@gioia.ovh</a>. Rispondiamo entro 48 ore lavorative.</p>
     </div>
 
   </main>
@@ -191,11 +173,12 @@
             <span style="font-family:var(--serif);font-style:italic;font-size:26px;color:var(--ivory);">Quadra</span>
           </div>
           <div class="claim">I conti quadrano.</div>
-          <p style="font-size:13px;">App di finanza personale by Antonio Gioia.</p>
+          <p style="font-size:13px;">App di finanza personale Zero-Knowledge by Antonio Gioia.</p>
         </div>
         <div class="footer-col">
           <h4>Prodotto</h4>
           <a href="index.html#funzioni">Funzioni</a>
+          <a href="index.html#piani">Piani</a>
           <a href="index.html#download">Scarica</a>
           <a href="privacy.html">Privacy first</a>
         </div>
@@ -208,13 +191,13 @@
         <div class="footer-col">
           <h4>Supporto</h4>
           <a href="supporto.html">Centro assistenza</a>
-          <a href="mailto:quadra@gioia.ovh">quadra@gioia.ovh</a>
-          <a href="supporto.html#contatti">Contatti</a>
+          <a href="mailto:info@gioia.ovh">info@gioia.ovh</a>
+          <a href="supporto.html#architettura">Architettura local-only</a>
         </div>
       </div>
       <div class="footer-meta">
         <span>© 2026 Antonio Gioia · Tutti i diritti riservati</span>
-        <span>quadra.gioia.ovh · v1.0</span>
+        <span>quadra.gioia.ovh · v3.7.0</span>
       </div>
     </div>
   </footer>
