@@ -271,6 +271,39 @@ section { padding: clamp(72px, 10vw, 128px) 0; }
   display: flex; flex-direction: column; gap: 14px;
   overflow: hidden;
 }
+/* Real screenshot inside the phone frame */
+.phone-shell.shot { padding: 8px; }
+.phone-shell .phone-shot {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 28px;
+  display: block;
+}
+
+/* ─── Screenshot showcase gallery ─── */
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+  margin-top: 8px;
+}
+.showcase-grid figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.showcase-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.55));
+}
 
 /* ─── Footer ─── */
 footer.site-footer {
@@ -642,6 +675,7 @@ footer.site-footer {
   .hero-grid, .feature-row, .feature-row.reverse { grid-template-columns: 1fr; gap: 48px; }
   .feature-row.reverse .feature-art { order: 0; }
   .grid-3 { grid-template-columns: 1fr; }
+  .showcase-grid { grid-template-columns: 1fr; gap: 48px; max-width: 320px; margin-left: auto; margin-right: auto; }
   .numbers-strip { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .legal .toc ol { grid-template-columns: 1fr; }

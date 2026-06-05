@@ -181,9 +181,9 @@
   <!-- ─── Hero ─── -->
   <section class="support-hero" data-screen-label="Supporto · hero">
     <div class="wrap">
-      <span class="eyebrow">centro assistenza · v3.7.0</span>
+      <span class="eyebrow">centro assistenza</span>
       <h1>Siamo qui per<br />farti quadrare i conti.</h1>
-      <p class="lead">Risposte alle domande più frequenti e un canale diretto via email. Quadra è un progetto piccolo, ma curato con attenzione: scrivi e leggiamo davvero.</p>
+      <p class="lead">Risposte alle domande più frequenti e un canale diretto via email. Quadra è un progetto piccolo, curato da una persona sola con passione: scrivi e leggo davvero.</p>
     </div>
   </section>
 
@@ -198,14 +198,14 @@
           <a href="mailto:info@gioia.ovh" class="value">info@gioia.ovh</a>
         </div>
         <div class="contact-card">
-          <span class="num">02 · Tempi</span>
-          <h3>Quando ti rispondiamo</h3>
-          <p>Rispondiamo personalmente a ogni email entro <strong style="color:var(--ivory);">48 ore lavorative</strong>. Nessun bot, nessun ticket numerato.</p>
+          <span class="num">02 · Risposte</span>
+          <h3>Ti rispondo io</h3>
+          <p>Dietro Quadra ci sono io: la sviluppo da solo, per passione. Leggo ogni email e <strong style="color:var(--ivory);">cerco di rispondere a tutti</strong> appena posso. Niente bot, niente ticket numerati.</p>
         </div>
         <div class="contact-card">
           <span class="num">03 · Privacy</span>
           <h3>Privacy first</h3>
-          <p>Quadra è Zero-Knowledge: i tuoi dati restano cifrati sul dispositivo. Per dubbi sui tuoi diritti scrivi all'email qui a fianco.</p>
+          <p>Con Quadra i tuoi conti restano protetti sul tuo telefono e li puoi leggere solo tu. Per qualsiasi dubbio sui tuoi diritti, scrivi all'email qui a fianco.</p>
           <a href="privacy.html#diritti" class="value">Vedi i tuoi diritti →</a>
         </div>
       </div>
@@ -223,15 +223,15 @@
       <div class="faq">
         <details>
           <summary>
-            <span><span class="num">01</span>Cos'è la Master Password e cosa succede se la perdo?</span>
+            <span><span class="num">01</span>Cos'è la password principale e cosa succede se la dimentico?</span>
             <span class="toggle">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg>
             </span>
           </summary>
           <div class="answer">
-            <p>La <strong>Master Password</strong> è la chiave che protegge il database cifrato del tuo dispositivo. Dal suo valore Quadra deriva localmente — con <strong>Argon2id</strong> — la chiave AES-256 che cifra l'intero database SQLCipher. La password non viene mai trasmessa, mai memorizzata in chiaro. Sul disco vivono solo un <em>salt</em> e un <em>verifier</em> SHA-256: nessun segreto recuperabile.</p>
-            <p>Conseguenza diretta: <strong>se la perdi, i tuoi dati e i backup diventano irreversibilmente irrecuperabili</strong>. Non esiste alcuna procedura di reset, nemmeno lato Titolare. Annotala in un password manager o in un luogo sicuro.</p>
-            <p>In compenso puoi sbloccare l'app con la <strong>biometria</strong> (Secure Enclave su iOS, Android Keystore): la chiave resta protetta a livello hardware.</p>
+            <p>La <strong>password principale</strong> è la chiave dei tuoi conti: protegge tutto ciò che hai dentro Quadra e la conosci soltanto tu. Non la salviamo da nessuna parte e non viaggia mai su internet — resta sul tuo telefono.</p>
+            <p>Proprio per questo, <strong>se la dimentichi non possiamo recuperarla al posto tuo</strong>, e senza di lei i conti e i backup non sono più apribili. Non esiste un “reset password”, nemmeno da parte nostra. Conservala in un posto sicuro, per esempio in un gestore di password.</p>
+            <p>Per usarla ogni giorno non devi però riscriverla ogni volta: puoi sbloccare l'app con l'<strong>impronta o il volto</strong>.</p>
           </div>
         </details>
 
@@ -243,9 +243,9 @@
             </span>
           </summary>
           <div class="answer">
-            <p><strong>No, mai a un nostro server: non ne abbiamo.</strong> I dati che inserisci (movimenti, categorie, regole, archivi) restano nel database <strong>cifrato</strong> del tuo dispositivo.</p>
-            <p>L'unica eccezione, <strong>opt-in</strong> e gestita da te: se attivi <em>Cloud Backup</em>, l'app carica su Google Drive o iCloud un file <code>.zip</code> che contiene il database <strong>già cifrato</strong>. Né noi né i provider possono leggerne il contenuto: la cifratura è fatta sul dispositivo prima dell'upload.</p>
-            <p>Per il dettaglio completo dei servizi esterni vedi la <a href="privacy.html#tecnici">Privacy Policy → Servizi tecnici</a>.</p>
+            <p><strong>No, e per un motivo semplice: un nostro server non esiste.</strong> Tutto quello che inserisci — movimenti, categorie, regole, archivi — resta protetto sul tuo telefono.</p>
+            <p>L'unica eccezione la decidi tu: se attivi il <em>backup nel cloud</em>, Quadra carica su Google Drive o iCloud un file <strong>già protetto</strong>. Né noi né Google o Apple possiamo leggerne il contenuto, perché viene chiuso a chiave sul tuo telefono prima di partire.</p>
+            <p>Vuoi i dettagli sui servizi che entrano in gioco? Li trovi nella <a href="privacy.html#tecnici">Privacy Policy → Servizi tecnici</a>.</p>
           </div>
         </details>
 
@@ -257,12 +257,12 @@
             </span>
           </summary>
           <div class="answer">
-            <p>No. Quadra non utilizza Open Banking, PSD2 o altri sistemi di aggregazione bancaria. Non chiede né conserva le credenziali della tua banca. Meno dati sensibili, meno superficie di attacco, zero terze parti nel mezzo.</p>
-            <p>Per portare i tuoi movimenti dentro Quadra:</p>
+            <p>No. Quadra non si collega alla tua banca e non chiede mai le credenziali del tuo home banking. Meno dati delicati in giro, più tranquillità.</p>
+            <p>Per portare i tuoi movimenti dentro Quadra hai tre strade:</p>
             <ul>
-              <li>scarica l'<strong>estratto conto in CSV, XLS o XLSX</strong> dall'home banking e importalo;</li>
-              <li>se la tua banca non è tra i profili predefiniti, il <strong>Parser Builder</strong> ti guida a creare un profilo personalizzato da un file di esempio in 6 step;</li>
-              <li>oppure aggiungi i movimenti <strong>manualmente</strong>.</li>
+              <li>scarichi l'<strong>estratto conto</strong> dal sito o dall'app della banca e lo importi;</li>
+              <li>se la tua banca è nuova per Quadra, l'app ti <strong>accompagna passo passo</strong> a configurarla la prima volta, partendo da un file di esempio;</li>
+              <li>oppure aggiungi i movimenti <strong>a mano</strong>.</li>
             </ul>
           </div>
         </details>
@@ -277,30 +277,30 @@
           <div class="answer">
             <p>Ci sono tre piani:</p>
             <ul>
-              <li><strong>Free</strong> — sempre gratuito. Storico ultimi 3 mesi, 2 portafogli, 1 archivio. Tutte le funzioni core.</li>
-              <li><strong>Premium</strong> — storico illimitato, 4 portafogli, 2 archivi, Cloud Backup cifrato.</li>
-              <li><strong>Pro</strong> — illimitato su tutto + export Excel (6 fogli con formule) + export PDF.</li>
+              <li><strong>Free</strong> — gratis per sempre. Storico degli ultimi 3 mesi, 2 portafogli, 1 archivio e tutte le funzioni principali.</li>
+              <li><strong>Premium</strong> — storico illimitato, più portafogli e archivi, backup nel cloud.</li>
+              <li><strong>Pro</strong> — tutto senza limiti, più l'esportazione in Excel e PDF.</li>
             </ul>
-            <p>La <strong>Modalità Demo</strong> è gratuita per tutti, anche senza acquisto: 3 fonti italiane realistiche e 13 mesi di transazioni da esplorare.</p>
-            <p>Prezzi mensili e annuali compaiono direttamente nella schermata Abbonamento dell'app — gestiti da App Store e Play Store via RevenueCat, niente carta sul nostro sito. Si disdice dalle impostazioni dello store.</p>
+            <p>La <strong>Modalità Demo</strong> è gratuita per tutti, anche senza acquistare nulla: trovi conti realistici e oltre un anno di movimenti da esplorare con calma.</p>
+            <p>I prezzi, mensili o annuali, li vedi nell'app prima di confermare. Gli abbonamenti si gestiscono dallo store del telefono e si disdicono quando vuoi.</p>
           </div>
         </details>
 
         <details>
           <summary>
-            <span><span class="num">05</span>Come funziona la partita doppia?</span>
+            <span><span class="num">05</span>Come fa Quadra a tenere i conti sempre giusti?</span>
             <span class="toggle">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg>
             </span>
           </summary>
           <div class="answer">
-            <p>Ogni transazione ha sempre <strong>due lati</strong>: un conto di addebito e un conto di accredito. Il saldo di un conto non è un campo statico, ma viene calcolato dinamicamente dalla catena completa delle transazioni — niente disallineamenti, niente "ricalibratura magica".</p>
-            <p>Conseguenze pratiche:</p>
+            <p>Ogni volta che del denaro si sposta, Quadra registra sempre <strong>due lati</strong>: da dove esce e dove entra. È il metodo che usano i contabili, e serve a una cosa sola: i conti tornano sempre, al centesimo.</p>
+            <p>In pratica, per te significa:</p>
             <ul>
-              <li><strong>Opening balance</strong>: una transazione di sistema fissa il punto zero del conto;</li>
-              <li><strong>Riconciliazione</strong>: confronto saldo app vs saldo banca reale con rettifica automatica;</li>
-              <li><strong>Giroconti</strong> tracciati su entrambi i conti, con <em>split-reconciliation</em> per i casi in cui importi prima un CSV e poi l'altro;</li>
-              <li><strong>Conti connessi</strong> (sub-account, es. Satispay o prepagate): danno solo il dettaglio delle spese del conto principale, senza doppi conteggi.</li>
+              <li>i <strong>saldi</strong> sono sempre aggiornati e corretti, senza calcoli a mano;</li>
+              <li>puoi <strong>allinearli</strong> con il saldo reale della banca con un controllo guidato;</li>
+              <li>i <strong>trasferimenti</strong> tra i tuoi conti vengono riconosciuti e non contati due volte;</li>
+              <li>le <strong>carte collegate</strong> (come Satispay o le prepagate) mostrano il dettaglio delle spese senza raddoppiare i totali.</li>
             </ul>
           </div>
         </details>
@@ -313,9 +313,9 @@
             </span>
           </summary>
           <div class="answer">
-            <p>Quadra usa un <strong>motore OTA di import bancario</strong>: i profili di parsing sono configurazioni JSON scaricabili over-the-air. Un singolo parser unificato interpreta <code>CSV</code>, <code>XLS</code> (BIFF8) e <code>XLSX</code>. Aggiungere il supporto a una nuova banca non richiede un aggiornamento dell'app.</p>
-            <p>Profili predefiniti installati al primo avvio: <strong>BPER Conto Corrente, BPER Carta di Credito, Revolut, BCC Conto Corrente, Satispay</strong>. Altri vengono distribuiti via OTA.</p>
-            <p>Se la tua banca non è riconosciuta, il <strong>Parser Builder</strong> ti accompagna in 6 step a creare un profilo personalizzato partendo da un file di esempio — con anteprima live e versioning utente <code>_user_v1</code>, <code>_user_v2</code> …</p>
+            <p>Quadra legge i file di estratto conto di quasi tutte le banche e li capisce da sola. Quando arriva una banca nuova, <strong>non devi aspettare un aggiornamento dell'app</strong>: il supporto si aggiunge in automatico.</p>
+            <p>Già pronte all'uso: <strong>BPER (conto e carta di credito), Revolut, BCC, Satispay</strong> — e altre in arrivo.</p>
+            <p>Se la tua banca non viene riconosciuta, Quadra ti <strong>accompagna passo passo</strong> a configurarla partendo da un tuo file di esempio, mostrandoti l'anteprima mentre procedi.</p>
           </div>
         </details>
 
@@ -327,59 +327,59 @@
             </span>
           </summary>
           <div class="answer">
-            <p><code>.quadra</code> è un formato di archivio nostro — uno ZIP mascherato con magic header <code>QUADv1</code> — che contiene i database già cifrati con SQLCipher e un manifest. Lo puoi esportare su filesystem, share sheet, cartelle di terze app, opzionalmente con un secondo livello di cifratura AES-GCM tramite password scelta da te.</p>
-            <p>Il sistema operativo riconosce nativamente l'estensione: toccare un <code>.quadra</code> da Files, mail, AirDrop, Drive, WhatsApp o Telegram apre direttamente Quadra sulla schermata di import. Se l'archivio contiene database che sovrascriverebbero un esistente, l'app te lo segnala in modo esplicito prima di procedere.</p>
+            <p><code>.quadra</code> è il formato con cui Quadra racchiude tutti i tuoi conti in un <strong>unico file, protetto</strong>. Lo puoi salvare dove vuoi — sul telefono, in una cartella, in un'altra app — e, se preferisci, aggiungere una password per renderlo ancora più sicuro.</p>
+            <p>Il bello è che il tuo telefono lo riconosce: ti basta toccare un file <code>.quadra</code> ricevuto via Mail, AirDrop, Drive o messaggio per <strong>aprirlo direttamente in Quadra</strong>. E se quel file sostituirebbe dei conti già presenti, l'app te lo dice chiaramente prima di procedere.</p>
           </div>
         </details>
 
         <details>
           <summary>
-            <span><span class="num">08</span>Come funziona il Cloud Backup?</span>
+            <span><span class="num">08</span>Come funziona il backup nel cloud?</span>
             <span class="toggle">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg>
             </span>
           </summary>
           <div class="answer">
-            <p>Disponibile dai piani <strong>Premium</strong> e <strong>Pro</strong>. Carica solo il file <code>.db</code> <strong>già cifrato</strong> sul tuo provider preferito. Due opzioni:</p>
+            <p>È disponibile con <strong>Premium</strong> e <strong>Pro</strong>. Quadra salva i tuoi conti — già protetti — sul cloud che preferisci:</p>
             <ul>
-              <li><strong>Google Drive</strong>: scope <code>drive.file</code>, cartella visibile "Quadra" nel tuo Drive — scaricabile da web e da altri dispositivi;</li>
-              <li><strong>Apple iCloud</strong> (iOS/macOS): contenitore CloudDocuments dedicato all'app.</li>
+              <li><strong>Google Drive</strong>: in una cartella “Quadra” che ritrovi anche dal web e dagli altri dispositivi;</li>
+              <li><strong>iCloud</strong>: su iPhone e Mac.</li>
             </ul>
-            <p>Puoi anche scegliere una <strong>cartella locale</strong> persistente (SAF su Android, security-scoped bookmark su iOS) sincronizzabile con Drive / Synology / kDrive — utile se vuoi tenere i backup fuori da OAuth che scadono.</p>
-            <p>Il <strong>backup automatico programmabile</strong> (giornaliero, settimanale o mensile) viene gestito in background. Retention configurabile delle ultime versioni.</p>
+            <p>Se preferisci, puoi anche salvare in una <strong>cartella sul tuo computer</strong>, da sincronizzare con il servizio che usi già.</p>
+            <p>Il backup può avvenire <strong>da solo</strong> — ogni giorno, settimana o mese — e Quadra tiene da parte le ultime versioni, così puoi tornare indietro se serve.</p>
           </div>
         </details>
 
         <details>
           <summary>
-            <span><span class="num">09</span>Come funzionano le regole IFTTT?</span>
+            <span><span class="num">09</span>Come faccio a ordinare le spese in automatico?</span>
             <span class="toggle">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg>
             </span>
           </summary>
           <div class="answer">
-            <p>Una regola è un'istruzione: <em>"SE un movimento ha certe caratteristiche, ALLORA assegnagli categoria / giroconto / descrizione"</em>. Esempio:</p>
-            <p><code>SE descrizione contiene "Esselunga" E importo &lt; €200 ALLORA categoria = Spesa</code></p>
-            <p>Le condizioni disponibili sono: <em>contiene, inizia con, finisce con, uguale a, regex, contiene tutte</em>. Si filtrano per direzione (entrata / uscita) e per importo (&gt;, &lt;, intervallo). Le regole hanno priorità riordinabile con drag-and-drop.</p>
-            <p>Per categorizzare in massa lo storico c'è il <strong>Wizard "Regole da transazioni non categorizzate"</strong>: raggruppa per token dominante, ti propone regole con anteprima live, riconosce automaticamente i potenziali giroconti. <strong>Riapplica tutto</strong> rielabora lo storico in batch ottimizzato con preview prima del commit.</p>
+            <p>Con le <strong>regole</strong>. Una regola è una semplice istruzione: <em>“quando un movimento ha queste caratteristiche, mettilo in questa categoria”</em>. Per esempio:</p>
+            <p><code>Tutto ciò che arriva da “Esselunga” sotto i 200 € → categoria Spesa</code></p>
+            <p>Puoi riconoscere i movimenti dal <strong>nome</strong>, dall'<strong>importo</strong> o dal <strong>tipo</strong>, e decidere tu l'ordine con cui le regole vengono applicate.</p>
+            <p>Per sistemare tutto lo storico in un colpo, Quadra ti dà una mano: guarda i movimenti ancora senza categoria e ti <strong>propone le regole giuste</strong>, mostrandoti l'anteprima prima di confermare.</p>
           </div>
         </details>
 
         <details>
           <summary>
-            <span><span class="num">10</span>Cosa sono i Report e cosa esporto?</span>
+            <span><span class="num">10</span>Cosa trovo nei riepiloghi e cosa posso esportare?</span>
             <span class="toggle">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg>
             </span>
           </summary>
           <div class="answer">
-            <p>Il <strong>Report annuale</strong> include Savings Rate, bar chart mensile entrate/uscite, heatmap categorie × mesi, breakdown spese per portafoglio, sezione Liquidità / Budget allineata ai totali del Bilancio.</p>
-            <p>Con il piano <strong>Pro</strong> esporti:</p>
+            <p>Il <strong>riepilogo annuale</strong> ti mostra quanto hai messo da parte, l'andamento mese per mese di entrate e uscite, le categorie su cui spendi di più e il dettaglio per ogni conto — tutto in chiaro.</p>
+            <p>Con il piano <strong>Pro</strong> puoi esportare:</p>
             <ul>
-              <li><code>quadra_&lt;anno&gt;.xlsx</code> — Excel con 6 fogli e <strong>formule attive</strong>;</li>
-              <li><code>quadra_&lt;anno&gt;.pdf</code> — PDF pronto per archivio o consulente.</li>
+              <li>un file <strong>Excel</strong> pronto all'uso, con i conti già impostati;</li>
+              <li>un <strong>PDF</strong> da archiviare o da passare al commercialista.</li>
             </ul>
-            <p>Indipendentemente dal piano puoi esportare le <strong>regole</strong> (<code>Quadra-Regole-YYYY-MM-DD.json</code>) e l'<strong>archivio</strong> <code>.quadra</code> completo.</p>
+            <p>Le tue <strong>regole</strong> e l'<strong>archivio completo</strong> dei conti, invece, puoi esportarli con qualsiasi piano.</p>
           </div>
         </details>
 
@@ -391,9 +391,9 @@
             </span>
           </summary>
           <div class="answer">
-            <p>Sì. Ogni archivio è un file SQLite indipendente con UUID univoco e nome personalizzabile. Tipico caso d'uso: <em>"Personale"</em>, <em>"Famiglia"</em>, <em>"Attività"</em>. Puoi cifrarli on-demand, decifrare con la password originale, importare archivi provenienti da altri dispositivi (con rekey automatico in-place SQLCipher se le password sono diverse).</p>
-            <p>I limiti dipendono dal piano: 1 archivio in <strong>Free</strong>, 2 in <strong>Premium</strong>, illimitati in <strong>Pro</strong>.</p>
-            <p>C'è anche una <strong>Modalità Demo</strong> sempre disponibile: 3 fonti italiane realistiche (Intesa Sanpaolo, Nexi, Satispay) + 13 mesi di transazioni. Si rigenera automaticamente ogni 15 giorni con wipe completo. Gratuita per chiunque.</p>
+            <p>Sì. Ogni archivio è separato dagli altri e puoi dargli il nome che vuoi: per esempio <em>“Personale”</em>, <em>“Famiglia”</em>, <em>“Attività”</em>. Puoi proteggerli con una password, aprirli su un altro dispositivo e tenerli ben distinti.</p>
+            <p>Quanti puoi averne dipende dal piano: <strong>1</strong> con Free, <strong>2</strong> con Premium, <strong>illimitati</strong> con Pro.</p>
+            <p>C'è anche una <strong>Modalità Demo</strong> sempre disponibile e gratuita: conti realistici e oltre un anno di movimenti per provare l'app senza usare i tuoi dati. Si rinnova da sola ogni due settimane.</p>
           </div>
         </details>
 
@@ -405,13 +405,13 @@
             </span>
           </summary>
           <div class="answer">
-            <p>Tre modi, in ordine di comodità:</p>
+            <p>Tre modi, dal più comodo:</p>
             <ol>
-              <li><strong>Cloud Backup</strong>: sul vecchio device fai un upload (Drive o iCloud); sul nuovo accedi al backup e ripristina. Premium o Pro;</li>
-              <li><strong>Archivio <code>.quadra</code></strong>: esporta dal vecchio device, condividilo come preferisci (AirDrop, mail, Drive), aprilo sul nuovo dispositivo. Funziona su tutti i piani;</li>
-              <li><strong>Backup di sistema</strong>: iCloud (iOS) o Google Drive (Android) di sistema includono Quadra come ogni app, se il backup del dispositivo è attivo.</li>
+              <li><strong>Backup nel cloud</strong>: sul vecchio dispositivo salvi su Drive o iCloud, sul nuovo ripristini. Serve Premium o Pro;</li>
+              <li><strong>File <code>.quadra</code></strong>: esporti dal vecchio dispositivo, lo condividi come preferisci (AirDrop, Mail, Drive) e lo apri sul nuovo. Funziona con tutti i piani;</li>
+              <li><strong>Backup del telefono</strong>: se hai attivo il backup di iCloud o Google, Quadra è inclusa come ogni altra app.</li>
             </ol>
-            <p>Il <strong>Cloud Sync multi-device</strong> in tempo reale è in arrivo nel piano Pro.</p>
+            <p>La <strong>sincronizzazione automatica tra più dispositivi</strong>, in tempo reale, è in arrivo con il piano Pro.</p>
           </div>
         </details>
 
@@ -423,32 +423,32 @@
             </span>
           </summary>
           <div class="answer">
-            <p>Apri <strong>Impostazioni App → Abbonamento</strong>. Se hai un piano attivo vedrai tier, ciclo (mensile / annuale), prezzo, data di rinnovo o scadenza e i benefit del piano. Da qui puoi:</p>
+            <p>Apri <strong>Impostazioni → Abbonamento</strong> dentro l'app. Lì vedi il tuo piano, se è mensile o annuale, il prezzo e la data di rinnovo. Da qui puoi:</p>
             <ul>
-              <li>passare dal ciclo mensile a quello annuale (o viceversa);</li>
-              <li>se sei Premium, fare upgrade a Pro con il banner dedicato;</li>
-              <li>aprire la pagina di gestione del tuo store (<strong>App Store</strong> o <strong>Play Store</strong>) per disdire, riattivare o cambiare ciclo.</li>
+              <li>passare da mensile a annuale, o viceversa;</li>
+              <li>fare l'upgrade da Premium a Pro;</li>
+              <li>aprire la pagina del tuo store per disdire o cambiare piano.</li>
             </ul>
-            <p>Per requisiti di Apple e Google la disdetta avviene sempre sul tuo store: l'app non può cancellare un abbonamento direttamente.</p>
+            <p>Per le regole di Apple e Google, la disdetta avviene sempre sullo store del telefono: l'app da sola non può annullare un abbonamento.</p>
           </div>
         </details>
 
         <details>
           <summary>
-            <span><span class="num">14</span>Ho trovato un bug, dove lo segnalo?</span>
+            <span><span class="num">14</span>Ho trovato un problema, dove lo segnalo?</span>
             <span class="toggle">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg>
             </span>
           </summary>
           <div class="answer">
-            <p>Scrivi a <a href="mailto:info@gioia.ovh">info@gioia.ovh</a> con oggetto <em>"Bug"</em> e, se possibile, includi:</p>
+            <p>Scrivici a <a href="mailto:info@gioia.ovh">info@gioia.ovh</a> con oggetto <em>“Problema”</em> e, se puoi, aggiungi:</p>
             <ul>
-              <li>Versione dell'app (Impostazioni App → Info);</li>
-              <li>Dispositivo e sistema operativo (iOS, Android o macOS);</li>
-              <li>Passi per riprodurre il problema;</li>
-              <li>Eventuale screenshot (senza dati sensibili).</li>
+              <li>la versione dell'app (la trovi in Impostazioni → Info);</li>
+              <li>il dispositivo che usi (iPhone, Android o Mac);</li>
+              <li>cosa stavi facendo quando è successo;</li>
+              <li>uno screenshot, se ce l'hai (senza dati delicati).</li>
             </ul>
-            <p>I bug critici vengono risolti nel giro di pochi giorni con un aggiornamento distribuito via store.</p>
+            <p>I problemi più seri li risolviamo in pochi giorni con un aggiornamento.</p>
           </div>
         </details>
 
@@ -460,7 +460,7 @@
             </span>
           </summary>
           <div class="answer">
-            <p>Per favore sì. Le feature più richieste finiscono in roadmap. Scrivi a <a href="mailto:info@gioia.ovh">info@gioia.ovh</a> con oggetto <em>"Feature request"</em> raccontandoci il problema che vorresti risolvere — non solo la soluzione: spesso scopriamo che esiste già un modo di farlo, o ne troviamo uno migliore insieme.</p>
+            <p>Per favore sì. Le idee più richieste finiscono nei nostri programmi futuri. Scrivici a <a href="mailto:info@gioia.ovh">info@gioia.ovh</a> con oggetto <em>“Idea”</em> e raccontaci soprattutto il problema che vorresti risolvere, non solo la soluzione: a volte scopriamo che si può già fare, oppure troviamo insieme un modo migliore.</p>
           </div>
         </details>
       </div>
@@ -471,22 +471,22 @@
   <section id="architettura" style="padding: 0 0 120px;" data-screen-label="Supporto · architettura">
     <div class="wrap" style="max-width: 880px;">
       <div class="section-head" style="margin-bottom: 40px;">
-        <span class="eyebrow">architettura</span>
-        <h2 class="h-display h-3" style="margin-top: 12px;">Niente backend, niente downtime.</h2>
-        <p class="lead" style="margin-top: 16px;">Quadra non ha un server di prodotto. L'app funziona quando il tuo dispositivo funziona — i servizi esterni esistono solo se li attivi tu, e i dati che li attraversano sono già cifrati.</p>
+        <span class="eyebrow">come funziona</span>
+        <h2 class="h-display h-3" style="margin-top: 12px;">Nessun server, nessun disservizio.</h2>
+        <p class="lead" style="margin-top: 16px;">Quadra non ha un server da cui dipende: funziona quando funziona il tuo telefono. I servizi esterni entrano in gioco solo se li attivi tu, e i dati che li attraversano sono già protetti.</p>
       </div>
 
       <div class="local-panel">
         <div>
           <div class="label">Dove vivono i tuoi dati</div>
-          <div class="big">Cifrati, sul tuo dispositivo.</div>
-          <div class="meta">SQLCipher AES-256 · chiave Argon2id<br/>Cloud Backup opzionale · file già cifrato</div>
+          <div class="big">Protetti, sul tuo telefono.</div>
+          <div class="meta">Chiusi da una password che conosci solo tu<br/>Backup nel cloud opzionale, sempre protetto</div>
         </div>
         <ul>
-          <li><span>Connessione internet richiesta</span><span class="tag">OPZIONALE</span></li>
-          <li><span>Backend di Quadra</span><span class="tag">NESSUNO</span></li>
-          <li><span>Tracker · analytics · ads</span><span class="tag">ZERO</span></li>
-          <li><span>Master Password trasmessa</span><span class="tag">MAI</span></li>
+          <li><span>Serve la connessione a internet</span><span class="tag">SOLO SE VUOI</span></li>
+          <li><span>Un nostro server</span><span class="tag">NESSUNO</span></li>
+          <li><span>Pubblicità · tracciamenti</span><span class="tag">ZERO</span></li>
+          <li><span>La tua password viaggia su internet</span><span class="tag">MAI</span></li>
         </ul>
       </div>
     </div>
@@ -506,14 +506,14 @@
             <span style="font-family:var(--serif);font-style:italic;font-size:26px;color:var(--ivory);">Quadra</span>
           </div>
           <div class="claim">I conti quadrano.</div>
-          <p style="font-size:13px;">App di finanza personale Zero-Knowledge by Antonio Gioia.</p>
+          <p style="font-size:13px;">L'app per il bilancio di casa, semplice e privata. Di Antonio Gioia.</p>
         </div>
         <div class="footer-col">
           <h4>Prodotto</h4>
           <a href="index.html#funzioni">Funzioni</a>
           <a href="index.html#piani">Piani</a>
           <a href="index.html#download">Scarica</a>
-          <a href="privacy.html">Privacy first</a>
+          <a href="privacy.html">La tua privacy</a>
         </div>
         <div class="footer-col">
           <h4>Legale</h4>
@@ -525,7 +525,7 @@
           <h4>Supporto</h4>
           <a href="supporto.html">Centro assistenza</a>
           <a href="mailto:info@gioia.ovh">info@gioia.ovh</a>
-          <a href="supporto.html#architettura">Architettura local-only</a>
+          <a href="supporto.html#architettura">Come proteggiamo i dati</a>
         </div>
       </div>
       <div class="footer-meta">
